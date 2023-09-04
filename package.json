@@ -1,0 +1,22 @@
+{
+  "name": "playwright-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test tests/iHeartTests/ --config=tests/config_iHeart.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@applitools/eyes-playwright": "^1.12.2",
+    "@playwright/test": "^1.32.2"
+  },
+  "dependencies": {
+    "npm-clean": "^1.0.3",
+    "playwright": "^1.32.2",
+    "playwright-chromium": "^1.32.2",
+    "playwright-firefox": "^1.32.2"
+  }
+}

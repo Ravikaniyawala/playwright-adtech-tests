@@ -1,0 +1,18 @@
+trigger:
+  - radiosites-ux-e2e-tests
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '16.x',
+        workingDirectory: 'radiosites-e2e-tests'
+    displayName: 'Install Node.js'
+
+  - script: |
+      npm install
+      npx playwright install --with-deps
+      visual_Test=false npm run playwright:runnzbtests
+    displayName: 'npm install and build'
